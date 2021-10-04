@@ -12,7 +12,7 @@ const Rockets = () => {
       </p>
       <p>
         This is the initial state of the page: 
-        {rockets}
+          {rockets}
         .
       </p>
     </div>
