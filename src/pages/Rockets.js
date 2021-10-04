@@ -11,10 +11,11 @@ const Rockets = () => {
         This is the space of the rockets page.
       </p>
       <p>
-        This is the initial state of the page: 
-          {rockets}
-        .
+        This is the initial state of the page:
       </p>
+      <span>
+        {rockets}
+      </span> 
     </div>
   );
 };
