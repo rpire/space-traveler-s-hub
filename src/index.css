@@ -6,3 +6,11 @@
 body {
   background-color: pink;
 }
+
+a {
+  color: black;
+}
+
+.displaying {
+  color: red;
+}
