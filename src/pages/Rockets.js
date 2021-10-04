@@ -15,7 +15,7 @@ const Rockets = () => {
       </p>
       <span>
         {rockets}
-      </span> 
+      </span>
     </div>
   );
 };
