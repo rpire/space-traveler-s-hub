@@ -1,15 +1,26 @@
-const GET_MISSIONS = 'App/rockets/GET_MISSIONS';
+import axios from 'axios';
+
+const LOAD_MISSIONS = 'App/rockets/LOAD_MISSIONS';
+const url = 'https://api.spacexdata.com/v3/missions';
 
 const initialState = ['initial state for missions'];
 
-export const setBookList = () => ({
-  type: GET_MISSIONS,
+const loadMissions = (payload) => ({
+  type: LOAD_MISSIONS,
+  payload,
 });
+
+export const getMissions = () => async (dispatch) => {
+  const missions = await axios.get(url).then((response) => response.data);
+  if (missions) {
+    dispatch(loadMissions(missions));
+  }
+};
 
 const missionsReducer = (state = initialState, action) => {
   switch (action.type) {
-    case GET_MISSIONS:
-      return state;
+    case LOAD_MISSIONS:
+      return action.payload;
     default:
       return state;
   }
