@@ -4,7 +4,7 @@ const LOAD_ROCKETS = 'App/rockets/LOAD_ROCKETS';
 
 const url = 'https://api.spacexdata.com/v3/rockets';
 
-const initialState = ['initial state for rockets'];
+const initialState = [];
 
 const rocketsReducer = (state = initialState, action) => {
   switch (action.type) {

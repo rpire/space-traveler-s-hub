@@ -3,12 +3,17 @@
   margin: 0;
 }
 
-body {
-  background-color: pink;
+ul {
+  list-style-type: none;
 }
 
 a {
   color: black;
+}
+
+.img-fluid {
+ width: 100%;
+ max-width: 350px; 
 }
 
 .displaying {
