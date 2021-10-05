@@ -31,9 +31,10 @@ const Rocket = (props) => {
 };
 
 Rocket.propTypes = {
-  name: PropTypes.string.isRequired,
-  describe: PropTypes.string.isRequired,
-  images: PropTypes.instanceOf(Array).isRequired,
+  rocket: PropTypes.instanceOf(Object),
+  rocket_name: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
+  flickr_images: PropTypes.instanceOf(Array).isRequired,
 };
 
 export default Rocket;
