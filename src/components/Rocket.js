@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 import PropTypes from 'prop-types';
 
 const Rocket = (props) => {
@@ -31,9 +31,8 @@ const Rocket = (props) => {
 };
 
 Rocket.propTypes = {
-  rocket: PropTypes.instanceOf(Object),
+  rocket: PropTypes.instanceOf(Object).isRequired,
   rocket_name: PropTypes.string.isRequired,
-  description: PropTypes.string.isRequired,
   flickr_images: PropTypes.instanceOf(Array).isRequired,
 };
 
