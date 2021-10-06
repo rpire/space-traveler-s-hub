@@ -1,8 +1,21 @@
 import React from 'react';
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch} from 'react-redux';
+import { joinMission } from '../redux/missions/missions';
 
 const Missions = () => {
   const state = useSelector((state) => state.missions);
+  const dispatch = useDispatch();
+
+  const joiningMission = (e) => {
+    e.preventDefault();
+    const newState = state.map(join => {
+      if(join.mission_id !== join.id) 
+          return join;
+      return { ...join, reserved: true };
+  });
+    dispatch(joinMission(newState));
+  };
+
   return (
     <div className="container">
       <h1>Missions</h1>
@@ -33,7 +46,7 @@ const Missions = () => {
                 </div>
               </td>
               <td className="w-auto">
-                <input className="btn text-danger border border-secondary mt-5 mb-3 " type="button" value="Join Mission" />
+                <input className="btn text-danger border border-secondary mt-5 mb-3 " type="button" value="Join Mission" onClick={joiningMission} />
               </td>
             </tr>
           </tbody>
