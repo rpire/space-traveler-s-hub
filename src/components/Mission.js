@@ -32,6 +32,7 @@ const Mission = (props) => {
         </td>
         <td className="w-auto">
           <input className="btn text-danger border border-secondary mt-5 mb-3 " type="button" value="Join Mission" onClick={joinHandle} />
+          <input className="btn text-danger border border-secondary mt-5 mb-3 " type="button" value="Leave Mission" onClick={leaveHandle} />
         </td>
       </tr>
     </tbody>
