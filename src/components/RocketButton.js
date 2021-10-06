@@ -30,7 +30,7 @@ const RocketButton = (props) => {
     >
       Reserve Rocket
     </button>
-  )
+  );
 };
 
 RocketButton.defaultProps = {
@@ -40,6 +40,6 @@ RocketButton.defaultProps = {
 RocketButton.propTypes = {
   id: PropTypes.string.isRequired,
   reserved: PropTypes.bool,
-}
+};
 
 export default RocketButton;
