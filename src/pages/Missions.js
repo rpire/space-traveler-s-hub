@@ -15,7 +15,7 @@ const Missions = () => {
             <th scope="col">Mission</th>
             <th scope="col">Description</th>
             <th scope="col">Status</th>
-            <th scope="col" className="visually-hidden">.</th>
+            <th scope="col" className=""><small className="visually-hidden">.</small></th>
           </tr>
         </thead>
         {state.map((mission) => (
@@ -27,11 +27,13 @@ const Missions = () => {
               <td className="w-50">
                 <small>{mission.description}</small>
               </td>
-              <td className="w-auto  d-flex align-items-center heg ">
-                <small className="border border-secondary  bg-secondary text-white">Not a Member</small>
+              <td className="w-auto">
+                <div className="mt-5 mb-3">
+                  <small className="border border-secondary  bg-secondary text-white">Not a Member</small>
+                </div>
               </td>
-              <td className="w-auto heg ">
-                <input className="btn text-danger border border-secondary " type="button" value="Join Mission" />
+              <td className="w-auto">
+                <input className="btn text-danger border border-secondary mt-5 mb-3 " type="button" value="Join Mission" />
               </td>
             </tr>
           </tbody>
