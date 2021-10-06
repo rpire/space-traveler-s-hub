@@ -12,9 +12,10 @@ const rocketsReducer = (state = initialState, action) => {
     case LOAD_ROCKETS:
       return action.payload;
     case BOOK_ROCKET: {
-      const newState = state.map(rocket => {
-        if (rocket.rocket_id !== action.id) 
-            return rocket;
+      const newState = state.map((rocket) => {
+        if (rocket.rocket_id !== action.id) {
+          return rocket;
+        }
         return { ...rocket, reserved: true };
       });
       return newState;
