@@ -16,6 +16,5 @@ a {
 }
 
 .heg {
-  height:-webkit-fill-available;
-  height: -moz-available;    
+  height: fill-available;
 }
