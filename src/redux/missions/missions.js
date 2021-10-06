@@ -1,9 +1,9 @@
 import axios from 'axios';
 
-const LOAD_MISSIONS = 'App/rockets/LOAD_MISSIONS';
+const LOAD_MISSIONS = 'App/missions/LOAD_MISSIONS';
 const url = 'https://api.spacexdata.com/v3/missions';
 
-const initialState = ['initial state for missions'];
+const initialState = [];
 
 const loadMissions = (payload) => ({
   type: LOAD_MISSIONS,
