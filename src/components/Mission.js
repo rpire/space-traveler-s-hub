@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import JoinMissionButton from './JoinMission';
+import SwitchBadges from './SwitchBadge';
 
 const Mission = (props) => {
   const {
@@ -22,9 +23,7 @@ const Mission = (props) => {
           <small>{description}</small>
         </td>
         <td className="w-auto">
-          <div className="mt-5 mb-3">
-            <small className="border border-secondary  bg-secondary text-white">Not a Member</small>
-          </div>
+          <SwitchBadges reserved={reserved} id={id} />
         </td>
         <td className="w-auto">
           <JoinMissionButton reserved={reserved} id={id} />
