@@ -21,13 +21,15 @@ const links = [
 
 const Navbar = () => (
   <nav>
-    {links.map((link) => (
-      <li key={link.id}>
-        <NavLink to={link.path} activeClassName="displaying" exact>
-          {link.text}
-        </NavLink>
-      </li>
-    ))}
+    <ul className="d-flex ps-0">
+      {links.map((link) => (
+        <li key={link.id} className="mx-4">
+          <NavLink to={link.path} activeClassName="displaying" exact>
+            {link.text}
+          </NavLink>
+        </li>
+      ))}
+    </ul>
   </nav>
 );
 

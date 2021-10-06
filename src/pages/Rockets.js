@@ -1,20 +1,22 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
+import Rocket from '../components/Rocket';
 
 const Rockets = () => {
   const rockets = useSelector((state) => state.rockets);
 
   return (
-    <div className="rockets-container">
+    <div className="ms-4 me-3">
       <h1>Rockets</h1>
       <p>
         This is the space of the rockets page.
       </p>
-      <ul>
+      <ul className="pb-3 ps-0">
         {rockets.map((rocket) => (
-          <li key={rocket.rocket_id}>
-            {rocket.rocket_name}
-          </li>
+          <Rocket
+            key={rocket.rocket_id}
+            rocket={rocket}
+          />
         ))}
       </ul>
     </div>
