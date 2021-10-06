@@ -1,8 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { useDispatch } from 'react-redux';
-import { joinMission } from '../redux/missions/missions';
-import { leaveMission } from '../redux/missions/missions';
+import JoinMissionButton from './JoinMission';
 
 const Mission = (props) => {
   const {
@@ -10,15 +8,9 @@ const Mission = (props) => {
       mission_name: name,
       description,
       mission_id: id,
+      reserved,
     },
   } = props;
-  const dispatch = useDispatch();
-  const joinHandle = () => {
-    dispatch(joinMission(id));
-  };
-  const leaveHandle = () => {
-    dispatch(leaveMission(id));
-  };
 
   return (
     <tbody key={id}>
@@ -35,8 +27,7 @@ const Mission = (props) => {
           </div>
         </td>
         <td className="w-auto">
-          <input className="btn text-danger border border-secondary mt-5 mb-3 " type="button" value="Join Mission" onClick={joinHandle} />
-          <input className="btn text-danger border border-secondary mt-5 mb-3 " type="button" value="Leave Mission" onClick={leaveHandle} />
+          <JoinMissionButton reserved={reserved} id={id} />
         </td>
       </tr>
     </tbody>
