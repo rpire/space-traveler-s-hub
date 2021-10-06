@@ -15,10 +15,7 @@ const Rocket = (props) => {
   
   const dispatch = useDispatch();
 
-  const handleBooking = () => {
-    dispatch(bookRocket(id));
-    console.log('The button worked!');
-  };
+  const handleBooking = () => dispatch(bookRocket(id));
 
   return (
     <li>
