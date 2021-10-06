@@ -12,7 +12,7 @@ const Rocket = (props) => {
       flickr_images: images,
     },
   } = props;
-  
+
   const dispatch = useDispatch();
 
   const handleBooking = () => dispatch(bookRocket(id));
