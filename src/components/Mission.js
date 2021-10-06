@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { useDispatch } from 'react-redux';
-import { joinMission } from '../redux/missions/missions';
+import JoinMissionButton from './JoinMission';
+import SwitchBadges from './SwitchBadge';
 
 const Mission = (props) => {
   const {
@@ -9,12 +9,9 @@ const Mission = (props) => {
       mission_name: name,
       description,
       mission_id: id,
+      reserved,
     },
   } = props;
-  const dispatch = useDispatch();
-  const joinHandle = () => {
-    dispatch(joinMission(id));
-  };
 
   return (
     <tbody key={id}>
@@ -26,12 +23,10 @@ const Mission = (props) => {
           <small>{description}</small>
         </td>
         <td className="w-auto">
-          <div className="mt-5 mb-3">
-            <small className="border border-secondary  bg-secondary text-white">Not a Member</small>
-          </div>
+          <SwitchBadges reserved={reserved} id={id} />
         </td>
         <td className="w-auto">
-          <input className="btn text-danger border border-secondary mt-5 mb-3 " type="button" value="Join Mission" onClick={joinHandle} />
+          <JoinMissionButton reserved={reserved} id={id} />
         </td>
       </tr>
     </tbody>
