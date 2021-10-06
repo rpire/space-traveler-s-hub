@@ -23,7 +23,7 @@ const Mission = (props) => {
           <small>{description}</small>
         </td>
         <td className="w-auto">
-          <SwitchBadges reserved={reserved} id={id} />
+          <SwitchBadges reserved={reserved} />
         </td>
         <td className="w-auto">
           <JoinMissionButton reserved={reserved} id={id} />
