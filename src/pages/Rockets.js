@@ -10,12 +10,13 @@ const Rockets = () => {
       <p>
         This is the space of the rockets page.
       </p>
-      <p>
-        This is the initial state of the page:
-      </p>
-      <span>
-        {rockets}
-      </span>
+      <ul>
+        {rockets.map((rocket) => (
+          <li key={rocket.rocket_id}>
+            {rocket.rocket_name}
+          </li>
+        ))}
+      </ul>
     </div>
   );
 };
