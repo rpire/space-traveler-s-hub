@@ -30,11 +30,11 @@ const Missions = () => {
               <td className="w-50">
                 <small>{mission.description}</small>
               </td>
-              <td className="w-auto ">
-                <small className="border border-secondary positioning">Not a Member</small>
+              <td className="w-auto  d-flex align-items-center heg ">
+                <small className="border border-secondary  bg-secondary text-white">Not a Member</small>
               </td>
-              <td className="w-auto">
-                <button type="button" className="btn btn-secondary btn-small"> button</button>
+              <td className="w-auto heg ">
+                <input className="btn text-danger border border-secondary " type="button" value="Join Mission" />
               </td>
             </tr>
           </tbody>
