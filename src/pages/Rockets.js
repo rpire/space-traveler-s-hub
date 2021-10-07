@@ -8,9 +8,6 @@ const Rockets = () => {
   return (
     <div className="ms-4 me-3">
       <h1>Rockets</h1>
-      <p>
-        This is the space of the rockets page.
-      </p>
       <ul className="pb-3 ps-0">
         {rockets.map((rocket) => (
           <Rocket

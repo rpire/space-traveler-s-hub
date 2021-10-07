@@ -5,7 +5,7 @@ const MissionList = () => {
   const state = useSelector((state) => state.missions);
   const filtered = state.filter((mission) => mission.reserved === true);
 
-  if (filtered.length > 1) {
+  if (filtered.length > 0) {
     return (
       <ul className="list-group">
         {filtered.map((mission) => (

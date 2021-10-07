@@ -7,9 +7,6 @@ const Missions = () => {
   return (
     <div className="container">
       <h1>Missions</h1>
-      <p>
-        This is the space of the missions page.
-      </p>
       <table className="table table-bordered border-secondary table-striped p-3">
         <thead>
           <tr>
@@ -19,9 +16,11 @@ const Missions = () => {
             <th scope="col" className=""><small className="visually-hidden">.</small></th>
           </tr>
         </thead>
-        {state.map((mission) => (
-          <Mission key={mission.mission_id} mission={mission} />
-        ))}
+        <tbody>
+          {state.map((mission) => (
+            <Mission key={mission.mission_id} mission={mission} />
+          ))}
+        </tbody>
       </table>
     </div>
   );
