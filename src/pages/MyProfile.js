@@ -1,28 +1,18 @@
 import React from 'react';
-import { useSelector } from 'react-redux';
+import ReservedRocketList from '../components/ReservedRocketList';
+import MissionList from '../components/BookedMissionList';
 
-const MyProfile = () => {
-  const state = useSelector((state) => state.missions);
-  return (
-    <div className="profile-container container">
-      <h1>My Profile</h1>
-      <p>
-        This is the space of my profile page.
-      </p>
-      <div className="row">
-        <div className="col">
-          My Missions
-          <ul className="list-group">
-            {state.filter((mission) => mission.reserved === true).map((filtered) => (
-              <li className="list-group-item" key={filtered.mission_id}>
-                {filtered.mission_name}
-              </li>
-            ))}
-          </ul>
-        </div>
-        <div className="col">My Rockets</div>
-      </div>
+const MyProfile = () => (
+  <div className="d-flex justify-content-start ms-4 me-5">
+    <div className="col-5">
+      <h2>My Rockets</h2>
+      <ReservedRocketList />
     </div>
-  );
-};
+    <div className="col-5 ms-5">
+      <h2>My Missions</h2>
+      <MissionList />
+    </div>
+  </div>
+);
+
 export default MyProfile;
