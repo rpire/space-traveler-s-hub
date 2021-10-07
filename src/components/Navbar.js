@@ -31,7 +31,7 @@ const Navbar = () => (
         alt="STH Logo"
         className="logo me-2"
       />
-      <h1 className="mb-0">Space Traveler's Hub</h1>
+      <h1 className="mb-0">Space Traveler&apos;s Hub</h1>
     </div>
     <ul className="d-flex ps-0 mb-0 nav-list">
       {links.map((link) => (
