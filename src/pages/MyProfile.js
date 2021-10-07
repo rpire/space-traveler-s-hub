@@ -6,6 +6,10 @@ const MyProfile = () => (
     <p>
       This is the space of my profile page.
     </p>
+    <div className="row">
+      <div className="col">My Missions</div>
+      <div className="col">My Rockets</div>
+    </div>
   </div>
 );
 
