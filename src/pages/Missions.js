@@ -19,9 +19,11 @@ const Missions = () => {
             <th scope="col" className=""><small className="visually-hidden">.</small></th>
           </tr>
         </thead>
+        <tbody>
         {state.map((mission) => (
           <Mission key={mission.mission_id} mission={mission} />
         ))}
+        </tbody>
       </table>
     </div>
   );

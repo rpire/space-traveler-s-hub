@@ -14,8 +14,7 @@ const Mission = (props) => {
   } = props;
 
   return (
-    <tbody key={id}>
-      <tr>
+      <tr key={id}>
         <td className="">
           {name}
         </td>
@@ -29,7 +28,6 @@ const Mission = (props) => {
           <JoinMissionButton reserved={reserved} id={id} />
         </td>
       </tr>
-    </tbody>
   );
 };
 
