@@ -11,7 +11,7 @@ const Missions = () => {
       <p>
         This is the space of the missions page.
       </p>
-      <table className="table table-bordered border-secondary table-stripped p-3">
+      <table className="table table-bordered border-secondary table-striped p-3">
         <thead>
           <tr>
             <th scope="col">Mission</th>
