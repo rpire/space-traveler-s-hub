@@ -1,5 +1,6 @@
 import React from 'react';
 import ReservedRocketList from '../components/ReservedRocketList';
+import MissionList from '../components/BookedMissionList';
 
 const MyProfile = () => (
   <div className="d-flex justify-content-start ms-4 me-5">
@@ -9,11 +10,7 @@ const MyProfile = () => (
     </div>
     <div className="col-5 ms-5">
       <h2>My Missions</h2>
-      <ul className="list-group">
-        <li className="list-group-item">
-          Your Missions will be shown here...
-        </li>
-      </ul>
+      <MissionList />
     </div>
   </div>
 );

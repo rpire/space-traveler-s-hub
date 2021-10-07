@@ -9,7 +9,7 @@ const SwitchBadges = (props) => {
   if (reserved) {
     return (
       <div className="mt-5 mb-3">
-        <small className="border border-secondary  bg-secondary text-white">Active Member</small>
+        <small className="border border-primary  bg-primary  text-white">Active Member</small>
       </div>
 
     );

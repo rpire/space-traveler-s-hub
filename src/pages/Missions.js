@@ -4,14 +4,13 @@ import Mission from '../components/Mission';
 
 const Missions = () => {
   const state = useSelector((state) => state.missions);
-
   return (
     <div className="container">
       <h1>Missions</h1>
       <p>
         This is the space of the missions page.
       </p>
-      <table className="table table-bordered border-secondary table-stripped p-3">
+      <table className="table table-bordered border-secondary table-striped p-3">
         <thead>
           <tr>
             <th scope="col">Mission</th>

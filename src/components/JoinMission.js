@@ -18,11 +18,11 @@ const JoinMissionButton = (props) => {
 
   if (reserved) {
     return (
-      <input className="btn text-danger border border-secondary mt-5 mb-3 " type="button" value="Leave Mission" onClick={leaveHandle} />
+      <input className="btn text-danger  border-danger mt-5 mb-3 " type="button" value="Leave Mission" onClick={leaveHandle} />
     );
   }
   return (
-    <input className="btn text-danger border border-secondary mt-5 mb-3 " type="button" value="Join Mission" onClick={joinHandle} />
+    <input className="btn text-secondary border border-secondary mt-5 mb-3 " type="button" value="Join Mission" onClick={joinHandle} />
   );
 };
 
