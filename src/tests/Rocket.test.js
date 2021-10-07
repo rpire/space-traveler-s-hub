@@ -16,7 +16,7 @@ test('Renders Correctly', () => {
   render(
     <Provider store={store}>
       <Rocket rocket={rocket} />
-    </Provider>
+    </Provider>,
   );
   expect(screen).toMatchSnapshot();
 });
