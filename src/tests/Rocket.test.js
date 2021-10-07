@@ -1,7 +1,7 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
-import store from '../../src/redux/configureStore'
 import { Provider } from 'react-redux';
+import store from '../redux/configureStore';
 import Rocket from '../components/Rocket';
 
 test('Renders Correctly', () => {
@@ -13,8 +13,10 @@ test('Renders Correctly', () => {
     reserved: false,
   };
 
-  render(<Provider store={store}>
-    <Rocket rocket={rocket} />
-  </Provider>);
+  render(
+    <Provider store={store}>
+      <Rocket rocket={rocket} />
+    </Provider>
+  );
   expect(screen).toMatchSnapshot();
 });
