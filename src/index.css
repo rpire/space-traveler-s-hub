@@ -1,0 +1,31 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.logo {
+  width: 80px;
+}
+
+.nav-list li:nth-child(2) {
+  padding: 0 20px;
+  margin: 0 20px;
+  border-right: 1px solid gray;
+}
+
+.img-fluid {
+  width: 100%;
+  max-width: 350px;
+}
+
+.displaying {
+  text-decoration: underline;
+}
