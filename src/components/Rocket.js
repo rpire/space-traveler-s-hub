@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { useDispatch } from 'react-redux';
-import { bookRocket } from '../redux/rockets/rockets';
+import RocketButton from './RocketButton';
 
 const Rocket = (props) => {
   const {
@@ -10,12 +9,9 @@ const Rocket = (props) => {
       rocket_id: id,
       description,
       flickr_images: images,
+      reserved,
     },
   } = props;
-
-  const dispatch = useDispatch();
-
-  const handleBooking = () => dispatch(bookRocket(id));
 
   return (
     <li>
@@ -28,13 +24,10 @@ const Rocket = (props) => {
             <div className="card-body">
               <h3 className="card-title">{name}</h3>
               <p className="card-text">{description}</p>
-              <button
-                type="button"
-                className="btn btn-primary"
-                onClick={handleBooking}
-              >
-                Reserve Rocket
-              </button>
+              <RocketButton
+                id={id}
+                reserved={reserved}
+              />
             </div>
           </div>
         </div>
